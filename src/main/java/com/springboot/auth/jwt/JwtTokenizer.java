@@ -70,6 +70,7 @@ public class JwtTokenizer { //인증에 대한 정보는 무조건 숨겨야 합
                 .build()
                 .parseClaimsJws(jws);
     }
+
     public void verifySignature(String jws, String base64EncodedSecretKey) {
         Key key = getKeyFromBase64EncodedKey(base64EncodedSecretKey);
 
